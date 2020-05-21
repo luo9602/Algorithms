@@ -2,6 +2,12 @@ package com.luo.recursion;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * @author : Administrator
  * @date : 2020/5/21
@@ -49,6 +55,17 @@ public class RecursionTest {
             System.out.println("no path !");
         }
         print2dArray(labyrinth);
+    }
+
+    /**
+     * 八皇后问题
+     */
+    @Test
+    public void test4() {
+        EightQueens eightQueens = new EightQueens();
+        List<List<Integer>> result = eightQueens.getResult();
+        System.out.println(result.size());
+        result.forEach(System.out::println);
     }
 
     /**
