@@ -12,15 +12,27 @@ import java.util.Date;
  */
 public class SortTest {
 
-    @Test
-    public void test1() {
-        int length = 100000;
-        int[] arr = new int[length];
+    int length = 100000;
+    int[] arr = new int[length];
+
+    {
         for (int i = 0; i < length; i++) {
             arr[i] = (int) (Math.random() * length);
         }
+    }
+
+    @Test
+    public void test1() {
         long begin = System.currentTimeMillis();
         BubbleSorting.sort(arr);
+        long end = System.currentTimeMillis();
+        System.out.println(end - begin);
+    }
+
+    @Test
+    public void test2() {
+        long begin = System.currentTimeMillis();
+        SelectSorting.sort(arr);
         long end = System.currentTimeMillis();
         System.out.println(end - begin);
     }
