@@ -21,6 +21,9 @@ public class SortTest {
         }
     }
 
+    /**
+     * 冒泡排序
+     */
     @Test
     public void test1() {
         long begin = System.currentTimeMillis();
@@ -29,10 +32,24 @@ public class SortTest {
         System.out.println(end - begin);
     }
 
+    /**
+     * 选择排序
+     */
     @Test
     public void test2() {
         long begin = System.currentTimeMillis();
         SelectSorting.sort(arr);
+        long end = System.currentTimeMillis();
+        System.out.println(end - begin);
+    }
+
+    /**
+     * 插入排序
+     */
+    @Test
+    public void test3() {
+        long begin = System.currentTimeMillis();
+        InsertionSorting.sort(arr);
         long end = System.currentTimeMillis();
         System.out.println(end - begin);
     }
