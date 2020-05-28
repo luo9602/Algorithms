@@ -12,12 +12,12 @@ import java.util.Date;
  */
 public class SortTest {
 
-    int length = 100000;
+    int length = 1000000;
     int[] arr = new int[length];
 
     {
         for (int i = 0; i < length; i++) {
-            arr[i] = (int) (Math.random() * length);
+            arr[i] = (int) (Math.random() * length * 10);
         }
     }
 
@@ -50,6 +50,29 @@ public class SortTest {
     public void test3() {
         long begin = System.currentTimeMillis();
         InsertionSorting.sort(arr);
+        long end = System.currentTimeMillis();
+        System.out.println(end - begin);
+    }
+
+
+    /**
+     * 希尔排序 交换法
+     */
+    @Test
+    public void test4() {
+        long begin = System.currentTimeMillis();
+        ShellSorting.sortByExchanging(arr);
+        long end = System.currentTimeMillis();
+        System.out.println(end - begin);
+    }
+
+    /**
+     * 希尔排序 移位法
+     */
+    @Test
+    public void test5() {
+        long begin = System.currentTimeMillis();
+        ShellSorting.sortByMoving(arr);
         long end = System.currentTimeMillis();
         System.out.println(end - begin);
     }
