@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Random;
 
 /**
  * @author : Administrator
@@ -12,12 +13,12 @@ import java.util.Date;
  */
 public class SortTest {
 
-    int length = 1000000;
+    int length = 10;
     int[] arr = new int[length];
 
     {
         for (int i = 0; i < length; i++) {
-            arr[i] = (int) (Math.random() * length * 10);
+            arr[i] = new Random().nextInt(length);
         }
     }
 
