@@ -7,7 +7,7 @@ package com.luo.sort;
  */
 public class InsertionSorting {
 
-    public static int[] sort(int[] arr) {
+    public static void sort(int[] arr) {
         int insertVal, insertIndex;
         // 第一个元素为有序表, 从第二个元素开始其余元素为无序表
         for (int i = 1; i < arr.length; i++) {
@@ -23,7 +23,6 @@ public class InsertionSorting {
             }
             arr[insertIndex + 1] = insertVal;
         }
-        return arr;
     }
 
 }

@@ -10,7 +10,7 @@ public class ShellSorting {
     /**
      * 希尔排序 交换法
      */
-    public static int[] sortByExchanging(int[] arr) {
+    public static void sortByExchanging(int[] arr) {
         int temp;
         int length = arr.length;
         // 除以 2 分 gap 组, 每组中两相邻元素间隔 gap
@@ -28,13 +28,12 @@ public class ShellSorting {
                 }
             }
         }
-        return arr;
     }
 
     /**
      * 希尔排序 移位法
      */
-    public static int[] sortByMoving(int[] arr) {
+    public static void sortByMoving(int[] arr) {
         int j, temp;
         int length = arr.length;
         // 除以 2 分 gap 组, 每组中两相邻元素间隔 gap
@@ -54,7 +53,6 @@ public class ShellSorting {
                 }
             }
         }
-        return arr;
     }
 
 }

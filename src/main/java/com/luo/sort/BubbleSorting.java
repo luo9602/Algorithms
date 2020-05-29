@@ -9,7 +9,7 @@ import java.util.Arrays;
  */
 public class BubbleSorting {
 
-    public static int[] sort(int[] arr) {
+    public static void sort(int[] arr) {
         // 是否进行过交换
         boolean flag = false;
         int length = arr.length;
@@ -32,7 +32,6 @@ public class BubbleSorting {
                 flag = false;
             }
         }
-        return arr;
     }
 
 }

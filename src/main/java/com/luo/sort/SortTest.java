@@ -13,7 +13,7 @@ import java.util.Random;
  */
 public class SortTest {
 
-    int length = 10;
+    int length = 20;
     int[] arr = new int[length];
 
     {
@@ -74,6 +74,17 @@ public class SortTest {
     public void test5() {
         long begin = System.currentTimeMillis();
         ShellSorting.sortByMoving(arr);
+        long end = System.currentTimeMillis();
+        System.out.println(end - begin);
+    }
+
+    /**
+     * 快速排序
+     */
+    @Test
+    public void test6() {
+        long begin = System.currentTimeMillis();
+        QuickSorting.sort(arr, 0, arr.length - 1);
         long end = System.currentTimeMillis();
         System.out.println(end - begin);
     }
