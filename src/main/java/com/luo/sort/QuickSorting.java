@@ -7,7 +7,11 @@ package com.luo.sort;
  */
 public class QuickSorting {
 
-    public static void sort(int[] arr, int left, int right) {
+    public static void sort(int[] arr) {
+        sort(arr, 0, arr.length - 1);
+    }
+
+    private static void sort(int[] arr, int left, int right) {
         int l = left;
         int r = right;
         // pivot 数组中间数的值

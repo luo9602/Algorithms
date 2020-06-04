@@ -84,7 +84,7 @@ public class SortTest {
     @Test
     public void test6() {
         long begin = System.currentTimeMillis();
-        QuickSorting.sort(arr, 0, arr.length - 1);
+        QuickSorting.sort(arr);
         long end = System.currentTimeMillis();
         System.out.println(end - begin);
     }
