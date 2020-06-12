@@ -100,4 +100,15 @@ public class SortTest {
         System.out.println(end - begin);
     }
 
+    /**
+     * 基数排序
+     */
+    @Test
+    public void test8() {
+        long begin = System.currentTimeMillis();
+        RadixSorting.sort(arr);
+        long end = System.currentTimeMillis();
+        System.out.println(end - begin);
+    }
+
 }
